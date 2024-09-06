@@ -96,6 +96,7 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
 /* Estilos para o link "Ver no YouTube" */
 .link-youtube {
     color: #30475E; /* Cor do texto */
@@ -114,3 +115,69 @@ footer {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    section input {
+        width: 90%; /* Ajuste a largura do campo de input */
+        font-size: 0.9rem;
+    }
+
+    .resultados-pesquisa {
+        width: 90%; /* Ajuste a largura da caixa de resultados */
+        height: auto; /* Permitir altura flexível */
+    }
+
+    section button {
+        width: 90%;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem;
+    }
+
+    .item-resultado {
+        padding: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 480px) {
+    section input {
+        width: 100%; /* Ocupa toda a largura da tela */
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    section button {
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .resultados-pesquisa {
+        width: 100%; /* Ajuste total para celulares */
+        height: auto; /* Altura ajustável */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
