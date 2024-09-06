@@ -1,0 +1,116 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    background-image: url('R.png'); /* Caminho para a imagem */
+    background-size: cover;         /* A imagem cobre toda a tela */
+    background-position: center;    /* Centraliza a imagem */
+    background-repeat: no-repeat;   /* Evita que a imagem se repita */
+    height: 100vh;                  /* Define a altura para a tela cheia */
+    margin: 0;
+    font-family: "Chakra Petch", sans-serif; /* Fonte padrão */
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    padding: 0;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: red;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+/* Seções e botões */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+section input {
+    width: 30rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #45474B;
+}
+
+section button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #30475E;
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+section button:hover {
+    background-color: #222831;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Resultados */
+.resultados-pesquisa {
+    width: 60rem;
+    height: 46vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+.item-resultado {
+    background: red;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #222831;
+}
+
+.item-resultado p {
+    color: #45474B;
+}
+
+/* Footer */
+footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+/* Estilos para o link "Ver no YouTube" */
+.link-youtube {
+    color: #30475E; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 0.5rem 1rem; /* Adiciona algum espaçamento interno */
+    border-radius: 0.5rem; /* Deixa as bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo */
+    display: inline-block; /* Faz o link se comportar como um bloco */
+}
+
+.link-youtube:hover {
+    background-color: #222831; /* Muda a cor de fundo ao passar o mouse */
+    color: #F5F7F8; /* Muda a cor do texto ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
