@@ -8,22 +8,51 @@
 </head>
 <body>
     <header>
-        <h1>Lendas do Rock by Alyson </h1>
+        <h1>Lendas do Rock by Alyson</h1>
     </header>
     <main>
-        
+        <!-- Seção de pesquisa -->
         <section>
             <input type="text" id="pesquisa" placeholder="Pesquise por uma banda">
-            <button id="btnPesquisar">Pesquisar</button>
+            <button id="limpar">Limpar</button>
         </section>
 
+        <!-- Seção de sugestões (criada dinamicamente via JavaScript) -->
+        <div id="sugestoes"></div>
+
+        <!-- Seção para exibir os resultados completos -->
         <section class="resultados-pesquisa" id="resultados">
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Lendas do Rock by Alyson</p>
     </footer>
+
+    <!-- Importa os scripts -->
     <script src="dados.js"></script>
     <script src="app.js"></script>
+    <script>
+        // Função para limpar a pesquisa e esconder a lista de resultados
+        function limparPesquisa() {
+            // Limpar o campo de pesquisa
+            document.getElementById('pesquisa').value = '';
+            
+            // Esconder a lista de resultados
+            document.getElementById('resultados').style.display = 'none';
+            
+            // Esconder as sugestões
+            document.getElementById('sugestoes').style.display = 'none';
+            
+            // Ajustar o texto do botão para 'Limpar'
+            document.getElementById('limpar').textContent = 'Limpar';
+        }
+
+        // Executar a função quando a página for carregada
+        document.addEventListener('DOMContentLoaded', limparPesquisa);
+
+        // Adicionar evento de clique ao botão Limpar
+        document.getElementById('limpar').addEventListener('click', limparPesquisa);
+    </script>
 </body>
 </html>

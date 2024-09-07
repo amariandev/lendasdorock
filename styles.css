@@ -21,9 +21,10 @@ body {
 /* Título */
 h1 {
     font-size: 2.5rem;
-    color: red;
+    color: orange; /* Cor mais clara para contraste */
     text-align: center;
     letter-spacing: 0.4rem;
+    margin-bottom: 2rem; /* Espaço abaixo do título */
 }
 
 /* Seções e botões */
@@ -31,27 +32,29 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* Espaço ajustado */
 }
 
 section input {
     width: 30rem;
     padding: 1rem;
-    border: none;
-    border-radius: 1.5rem;
+    border: 1px solid #ddd; /* Borda leve adicionada */
+    border-radius: 0.5rem; /* Bordas mais suaves */
     margin-bottom: 1rem;
     font-size: 1rem;
     color: #45474B;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 section button {
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 0.5rem; /* Bordas mais suaves */
     background-color: #30475E;
     color: #F5F7F8;
     font-size: 1rem;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 section button:hover {
@@ -61,20 +64,22 @@ section button:hover {
 
 /* Resultados */
 .resultados-pesquisa {
-    width: 60rem;
-    height: 46vh;
+    background: #F5F7F8; /* Cor de fundo clara para contraste */
+    border-radius: 0.6rem;
+    width: 30rem;
+    height: 30vh; /* Ajustado para altura maior */
     overflow-y: auto;
     margin-top: 1rem;
     padding: 1rem;
-    border-radius: 0.6rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .item-resultado {
-    background: red;
+    background: #FFFFFF; /* Cor de fundo clara para contraste */
     border-radius: 0.6rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .item-resultado h2 {
@@ -88,8 +93,8 @@ section button:hover {
 
 /* Footer */
 footer {
-    background-color: red;
-    color: white;
+    background-color: #30475E; /* Cor de fundo ajustada */
+    color: #F5F7F8;
     text-align: center;
     padding: 1rem;
     width: 100%;
@@ -102,29 +107,29 @@ footer {
     color: #30475E; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
     font-size: 1rem; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    padding: 0.5rem 1rem; /* Adiciona algum espaçamento interno */
-    border-radius: 0.5rem; /* Deixa as bordas arredondadas */
-    background-color: #f9f9f9; /* Cor de fundo */
-    display: inline-block; /* Faz o link se comportar como um bloco */
+    font-weight: bold; /* Texto em negrito */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    background-color: #F5F7F8; /* Cor de fundo clara */
+    display: inline-block; /* Link se comporta como bloco */
 }
 
 .link-youtube:hover {
-    background-color: #222831; /* Muda a cor de fundo ao passar o mouse */
-    color: #F5F7F8; /* Muda a cor do texto ao passar o mouse */
+    background-color: #e2e2e2; /* Cor de fundo ao passar o mouse */
+    color: #222831; /* Cor do texto ao passar o mouse */
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     section input {
-        width: 90%; /* Ajuste a largura do campo de input */
+        width: 90%; /* Ajusta a largura do campo de input */
         font-size: 0.9rem;
     }
 
     .resultados-pesquisa {
-        width: 90%; /* Ajuste a largura da caixa de resultados */
-        height: auto; /* Permitir altura flexível */
+        width: 90%; /* Ajusta a largura da caixa de resultados */
+        height: auto; /* Altura flexível */
     }
 
     section button {
@@ -169,7 +174,7 @@ footer {
     }
 
     .resultados-pesquisa {
-        width: 100%; /* Ajuste total para celulares */
+        width: 100%; /* Ajusta para celulares */
         height: auto; /* Altura ajustável */
     }
 
@@ -179,5 +184,51 @@ footer {
 
     footer {
         font-size: 0.8rem;
+    }
+}
+
+/* Sugestões (aparecem abaixo do campo de pesquisa) */
+#sugestoes {
+    position: absolute;
+    width: 30rem; /* Mesma largura do campo de input */
+    background-color: #FFFFFF; /* Cor de fundo clara */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 0.5rem;
+    z-index: 1000; /* Coloca as sugestões acima de outros elementos */
+    max-height: 15rem; /* Limita a altura da lista de sugestões */
+    overflow-y: auto; /* Habilita o scroll se houver muitas sugestões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Cada item de sugestão */
+.sugestao-item {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd; /* Borda inferior leve */
+    cursor: pointer;
+    font-size: 1rem;
+    color: #30475E; /* Cor do texto */
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+.sugestao-item:hover {
+    background-color: #e2e2e2; /* Cor de fundo ao passar o mouse */
+    color: #222831; /* Cor do texto ao passar o mouse */
+}
+
+/* Último item não tem a borda inferior */
+.sugestao-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade para a lista de sugestões */
+@media (max-width: 768px) {
+    #sugestoes {
+        width: 90%; /* Mesma largura do input para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #sugestoes {
+        width: 100%; /* Ocupa toda a largura da tela em celulares */
     }
 }
